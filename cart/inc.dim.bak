@@ -1,0 +1,298 @@
+<div class="dim-layer">
+	<div class="dim-bg"></div>
+
+	<!-- S : 최근 배송지 선택 -->
+	<div id="delivery" class="delivery">
+		<div class="dim-layout">
+			<div class="dim-header">
+				<a href="javascript:void(0)" class="ico ico-back nav-close">돌아가기</a>
+				<h2 class="dep-tit2">최근 배송지 선택</h2>
+				<a href="javascript:void(0)" class="ico ico-myinfo">장바구니</a> 
+			</div>
+			<div class="dim-content">
+				<div class="wide-layout">
+					<div class="info-area p0">
+						<div class="gray-box">
+							<ul class="list-dotted">
+								<li>최근 배송된 주소지입니다.(최대 5개까지 보관)</li>
+								<li>선택하시면 자동으로 주소지가 입력됩니다.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="add-area">
+						<ul>
+							<% For i = 1 to 10 %>
+							<li>
+								<div class="txt-area">
+									<p class="name">정수민</p>
+									<p class="address">
+										(06178)<br>
+										서울 강남구 삼성로 434 (쥬비스타워)<br>
+										202-1310호
+									</p>
+									<p class="cellphone">010-0000-0000</p>
+									<a href="javascript:void(0)" class="color-gray">삭제</a>
+								</div>
+							</li>
+							<% Next %>
+							<li class="no-data">
+								<p>배송지 내역이 없습니다.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // E : 최근 배송지 선택 -->
+
+	<!-- S : 배송지 변경하기 -->
+	<div id="change" class="change">
+		<div class="dim-layout">
+			<div class="dim-header">
+				<a href="javascript:void(0)" class="ico ico-back nav-close">돌아가기</a>
+				<h2 class="dep-tit2">배송지 변경하기</h2>
+				<a href="javascript:void(0)" class="ico ico-myinfo">장바구니</a> 
+			</div>
+			<div class="dim-content">
+				<div class="wide-layout">
+					<div class="info-area p0">
+						<div class="gray-box">
+							<ul class="list-dotted pr20">
+								<li>주문번호 당 하나의 배송지로만 변경 가능합니다. </li>
+								<li>
+									주문상품의 배송상태가 [배송준비중]일 때만 변경 가능하며
+									[배송중] 상태의 상품 배송지 변경은 고객센터 (1522-0568 또는           
+									1:1상담)로 문의주시기 바랍니다. 
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="add-area">
+						<ul>
+							<li>
+								<h4 class="dep-tit6">현재배송지</h4>	
+								<div class="price-area address-area">
+									<ul>
+										<li>
+											<span class="color-gray">수령인</span>
+											<span>홍은지</span>
+										</li>
+										<li>
+											<span class="color-gray">주소</span>
+											<span>(06178) 서울 강남구 삼성로 434 (쥬비스타워) 202-1310호</span>
+										</li>
+										<li>
+											<span class="color-gray">휴대폰번호</span>
+											<span>010-0000-0000</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h4 class="dep-tit6">변경배송지</h4>	
+								<div class="form-area">
+									<dl>
+										<dt>이름<span class="color-red">*</span></dt>
+										<dd>
+											<div class="form-type">
+												<label class="input-text">
+													<input type="text" name="" id="" value="김무스비" readonly>
+												</label>
+											</div>
+										</dd>
+										<dt>휴대폰번호<span class="color-red">*</span></dt>
+										<dd>
+											<div class="form-type">
+												<div class="row">
+													<span class="col-35">
+														<label class="select">
+															<select name="" id="">
+																<option value="선택">선택</option>
+																<option value="010">010</option>
+																<option value="011">011</option>
+																<option value="016">016</option>
+																<option value="017">017</option>
+																<option value="018">018</option>
+																<option value="019">019</option>
+															</select>
+														</label>
+													</span>
+													<span class="col-60">
+														<label class="input-text">
+															<input type="text" name="" id="" value="" placeholder="0000" maxlength="4">
+														</label>
+														<span>-</span>
+														<label class="input-text">
+															<input type="text" name="" id="" value="" placeholder="0000" maxlength="4">
+														</label>
+													</span>
+												</div>
+											</div>
+										</dd>
+										<dt>주소<span class="color-red">*</span></dt>
+										<dd>
+											<div class="form-type mb12">
+												<label class="input-text">
+													<input type="text" name="" id="" value="" readonly>
+													<button type="button" class="btn btn-search color-black">검색</button>
+												</label>
+											</div>
+
+											<div class="form-type mb12">
+												<label class="input-text">
+													<input type="text" name="" id="" value="" placeholder="기본 주소" readonly>
+												</label>
+											</div>
+											
+											<div class="form-type">
+												<label class="input-text">
+													<input type="text" name="" id="" value="" placeholder="나머지 주소">
+												</label>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<!-- S : btn-group -->
+								<div class="btn-group"> 
+									<a href="javascript:void(0);" class="btn btn-black">저장</a>
+								</div>
+								<!--// E : btn-group -->
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // E : 배송지 변경하기 -->
+	
+	<!-- S : 배송지 목록 -->
+	<div id="dellist" class="dellist">
+		<div class="dim-layout">
+			<div class="dim-header">
+				<a href="javascript:void(0)" class="ico ico-back nav-close">돌아가기</a>
+				<h2 class="dep-tit2">배송지 변경하기</h2>
+				<a href="javascript:void(0)" class="ico ico-myinfo">장바구니</a> 
+			</div>
+			<div class="dim-content">
+				<div class="wide-layout">
+					<div class="info-area p0">
+						<div class="gray-box">
+							<ul class="list-dotted pr20">
+								<li>주문번호 당 하나의 배송지로만 변경 가능합니다. </li>
+								<li>
+									주문상품의 배송상태가 [배송준비중]일 때만 변경 가능하며
+									[배송중] 상태의 상품 배송지 변경은 고객센터 (1522-0568 또는           
+									1:1상담)로 문의주시기 바랍니다. 
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="add-area">
+						<ul>
+							<li>
+								<h4 class="dep-tit6">현재배송지</h4>	
+								<div class="price-area address-area">
+									<ul>
+										<li>
+											<span class="color-gray">수령인</span>
+											<span>홍은지</span>
+										</li>
+										<li>
+											<span class="color-gray">주소</span>
+											<span>(06178) 서울 강남구 삼성로 434 (쥬비스타워) 202-1310호</span>
+										</li>
+										<li>
+											<span class="color-gray">휴대폰번호</span>
+											<span>010-0000-0000</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<h4 class="dep-tit6">변경배송지</h4>	
+								<div class="form-area">
+									<dl>
+										<dt>이름<span class="color-red">*</span></dt>
+										<dd>
+											<div class="form-type">
+												<label class="input-text">
+													<input type="text" name="" id="" value="김무스비" readonly>
+												</label>
+											</div>
+										</dd>
+										<dt>휴대폰번호<span class="color-red">*</span></dt>
+										<dd>
+											<div class="form-type">
+												<div class="row">
+													<span class="col-35">
+														<label class="select">
+															<select name="" id="">
+																<option value="선택">선택</option>
+																<option value="010">010</option>
+																<option value="011">011</option>
+																<option value="016">016</option>
+																<option value="017">017</option>
+																<option value="018">018</option>
+																<option value="019">019</option>
+															</select>
+														</label>
+													</span>
+													<span class="col-60">
+														<label class="input-text">
+															<input type="text" name="" id="" value="" placeholder="0000" maxlength="4">
+														</label>
+														<span>-</span>
+														<label class="input-text">
+															<input type="text" name="" id="" value="" placeholder="0000" maxlength="4">
+														</label>
+													</span>
+												</div>
+											</div>
+										</dd>
+										<dt>주소<span class="color-red">*</span></dt>
+										<dd>
+											<div class="form-type mb12">
+												<label class="input-text">
+													<input type="text" name="" id="" value="" readonly>
+													<button type="button" class="btn btn-search color-black">검색</button>
+												</label>
+											</div>
+
+											<div class="form-type mb12">
+												<label class="input-text">
+													<input type="text" name="" id="" value="" placeholder="기본 주소" readonly>
+												</label>
+											</div>
+											
+											<div class="form-type">
+												<label class="input-text">
+													<input type="text" name="" id="" value="" placeholder="나머지 주소">
+												</label>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<!-- S : btn-group -->
+								<div class="btn-group"> 
+									<a href="javascript:void(0);" class="btn btn-black">저장</a>
+								</div>
+								<!--// E : btn-group -->
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // E : 배송지 목록 -->
+</div>	
+	

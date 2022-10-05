@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+#footer{ display:none; }
+
+/* gst */
+.geust-content{}
+.geust-content .gray-box{ padding:20px 25px; }
+.geust-content .info-area .gray-box .tit{ font-size:18px; }
+
+.geust-content .info-area{ padding:0 25px; text-align:right; }

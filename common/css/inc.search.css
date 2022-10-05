@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* search */
+.search-content{}
+.search-content .wide-layout{ border-bottom:1px solid #ededed; }
+.search-content .search-area .txt-area{ padding:10px 0 28px;}
+.search-content .search-area .txt-area a{ line-height:10px; font-size:14px; font-weight:350; }

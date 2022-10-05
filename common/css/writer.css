@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/** common **/
+a{ text-decoration:none; }
+
+.layout-area{ margin-top:30px; margin-bottom:80px; padding:0 12px; }
+.writer-area{ padding:0; margin-top:0; margin-bottom:0; }
+
+.mt20{ margin-top:20px !important; }
+.mt25{ margin-top:25px !important; }
+.mt30{ margin-top:30px !important; }
+.mb30{ margin-bottom:80px !important; }
+
+.fw500{ font-weight:500; }
+.fw600{ font-weight:600; }
+
+/* txt */
+.txt-center{ text-align:center !important; }
+.txt-left{ text-align:left !important; }
+.txt-right{ text-align:right !important; }
+
+.txt-underline{ text-decoration:underline; }
+.txt-overflow{ overflow:hidden; text-overflow:ellipsis; word-break:break-all; white-space:normal; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; }
+
+/* tit */
+.tit-dep2{ font-size:32px !important; font-weight:500 !important; letter-spacing:-1.5px !important; }
+.tit-dep2 small{ display:block; font-size:16px !important; font-weight:400 !important; letter-spacing:-0.5px !important; }
+
+/* btn */
+.btn{ display:inline-block; position:relative; background-color:transparent; border:none; letter-spacing:-0.44px; text-align:center; overflow:hidden; cursor:pointer; } /* vertical-align:top; transition:all .3s ease-out .3s; */
+
+/* ico */
+[class^='ico-']{ width:20px; height:20px; margin-right:10px; display:inline-block; position:relative; text-indent:-9999px; background:url("//img.sdij.com/common/common.png") no-repeat; border:0; border-radius:50%; overflow:hidden; vertical-align:middle; } /* background-position:50% 0; background-size:100% 100%; background-repeat:no-repeat; */
+/* .ico-file{ background-color:#ddd; border:0; border-radius:50%; background-size:cover; overflow:hidden; } */
+.ico-file{ background-position:0 -1925px; }
+.ico-pdf{ background-position:0 -1850px; }
+.ico-zip{ background-position:-50px -1888px; }
+.ico-hwp{ background-position:0 -1888px; }
+.ico-word{ background-position:-50px -1850px; }
+
+/* file */
+.file-area{ line-height:20px; position:relative; font-size:0; }
+.file-area .tit{ position:absolute; left:0; }
+.file-area .btn{ width:90%; height:24px; line-height:20px; margin-bottom:12px; color:rgba(0, 0, 0, 0.6); text-align:left; text-decoration:underline; font-size:12px; vertical-align:middle; overflow:hidden; text-overflow:ellipsis; word-wrap:normal; white-space:nowrap; }
+.file-area .btn .ico-file{ width:20px; height:20px; margin-right:10px; }
+
+/* list */
+.list-dotted > li, p.list-dotted{ width:100%; position:relative; word-break:break-all; }
+.list-dotted > li, p.list-dotted{ line-height:24px; padding-left:12px; font-size:12px; font-weight:400; word-break:keep-all; }
+.list-dotted > li em{ line-height:13px; display:block; font-size:12px; color:#7d7d7d; margin:8px 0 0 0; }
+.list-dotted > li:after, p.list-dotted:after{ content:''; width:3px; height:3px; display:inline-block; position:absolute; top:10px; left:0; background-color:#000; border-radius:50%; }
+
+/* list-item */
+.list-item ul{ display:flex; flex-wrap:wrap; }
+.list-item ul li{ width:50%; margin-bottom:30px; display:flex; flex:0 1 50%; justify-content:center; align-items:center; }
+.list-item ul li a{ width:140px; padding:30px 0; text-align:center; border:1px solid rgba(0, 0, 0, 0.1); }
+.list-item ul li a:hover{ border:1px solid rgba(0, 0, 0, 0.5); transition:.8s ease-in; }
+.list-item ul li a .img-area > *{ box-sizing:border-box; }
+.list-item ul li a .img-area img{ max-width:100%; max-height:100%; }
+.list-item ul.book-list li a .img-area{ width:140px; height:210px; border:1px solid #ededed; }
+.list-item ul.book-list li{ margin-bottom:48px; align-items:baseline; }
+.list-item ul.book-list li a{ padding:0; border:0; text-align:left; }
+.list-item ul.book-list li a .txt-area{ margin-top:10px; }
+.list-item ul.book-list li a .txt-area > *{ height:60px; padding:0; overflow:hidden; text-overflow:ellipsis; word-break:break-all; white-space:normal; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; }
+.list-item ul.book-list li a .txt-area .tit{ font-size:14px; font-weight:400; }
+
+.list-item ul li a .circle-area{ width:60px; height:60px; margin:0 auto; border:1px solid transparent; border-radius:50%; overflow:hidden; } 
+.list-item ul li a .circle-area p.name{ min-height:100%; display:flex; align-items:center; justify-content:center; background-color:#C4D0D5; font-size:26px; font-weight:500; color:#fff; }
+.list-item ul li a .circle-area p.name:nth-child(odd){ background-color:#C9D6CA; }
+
+.list-item ul li a .txt-area{ margin-top:16px; }
+.list-item ul li a .txt-area > *{ padding:0 20px; vertical-align:middle; overflow:hidden; text-overflow:ellipsis; word-wrap:normal; white-space:nowrap; }
+.list-item ul li a .txt-area .tit{ line-height:20px; font-size:16px; font-weight:600; }
+.list-item ul li a .txt-area .txt{ line-height:22px; color:rgba(0, 0, 0, 0.6); font-size:12px; font-weight:400; }
+
+/* table */
+.board-list table{ border-top:2px solid #000; }
+.board-list table tbody tr{ border-bottom:1px solid rgba(0, 0, 0, 0.2); }
+.board-list table tbody tr th{ padding:50px 30px; }
+.board-list table tbody tr:nth-child(1) th{ background-color:rgba(0, 0, 0, 0.05); }
+.board-list table tbody tr:nth-child(2) th{ background-color:rgba(0, 0, 0, 0.08); }
+.board-list table tbody tr:nth-child(3) th{ background-color:rgba(0, 0, 0, 0.11); }
+
+.board-list table tbody tr p.tit-area{ line-height:16px !important; font-size:16px !important; font-weight:600; }
+.board-list table tbody tr p.tit-area small{ line-height:12px; margin-top:8px; display:block; font-size:12px; font-weight:350; }
+
+.board-list table tbody tr td{ padding:16px 20px; }
+.board-list table tbody tr td .txt-area .tit{ line-height:20px; margin-bottom:6px; font-size:14px; font-weight:500; }
+.board-list table tbody tr td .txt-area .list-dotted > li{ line-height:20px; color:rgba(0, 0, 0, 0.4); font-size:12px; font-weight:350; }
+.board-list table tbody tr td .txt-area .list-dotted > li.txt-underline{ color:#000; }
+
+/* visual-area */
+.visual-area{ width:100%; height:540px; background-image:url(//img.sdij.com/sd2019/books/mobile/top_bg.png); background-repeat:no-repeat; background-size:cover; background-position:0 100%; color:#fff; }
+.visual-area{ padding:40px 26px; }
+.visual-area .txt-area{ max-height:130px; overflow-y:hidden; }
+.visual-area .txt-area p{ line-height:22px; height:120px; color:rgba(255, 255, 255, 0.8); font-size:14px; font-weight:400; -webkit-line-clamp:5; }
+
+.visual-area .btn-group{ margin-top:10px; }
+.visual-area .btn-group .btn-more{ line-height:17px; color:#fff; font-size:12px; font-weight:500; }
+
+.visual-area > .img-area .list-item{ display:flex; justify-content:flex-end; }
+.visual-area > .img-area .list-item ul{ width:256px; }
+.visual-area > .img-area .list-item ul li{ margin-bottom:0; }
+.visual-area > .img-area .list-item ul li a{ width:104px; }
+.visual-area > .img-area .list-item ul li a .tit-area{ line-height:24px; margin-bottom:5px; color:#F7D5C0; font-size:12px; }
+.visual-area > .img-area .list-item ul li a .img-area{ width:104px; height:149px; border:1px solid #ededed; }
+.visual-area > .img-area .list-item ul li a .txt-area{ line-height:20px; font-size:14px; font-weight:300; letter-spacing:-0.2px; }
+.visual-area > .img-area .list-item ul li a .txt-area > * { height:40px; -webkit-line-clamp:2; }
+
+.books-detail .contents .itm{ border-bottom:0; }
+
+/* modal */
+.modalTeacher txt-area > *{ line-height:22px; font-size:14px; font-weight:400; }
+
+/* banner */
+.booksBanner .swiper-slide a{ background-color:#ddd; }
+
+

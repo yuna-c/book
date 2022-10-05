@@ -1,0 +1,47 @@
+/* cart-js */
+
+//전체 선택 
+$(document).ready(function() {
+	$('#chk_all').click(function(){
+		if($('#chk_all').is(':checked')){
+			$('.chk').prop('checked',true);
+			$('.item-control').slideDown();
+		}else{ 
+			$('.chk').prop('checked',false);
+			$('.item-control').slideUp();
+		}
+	});
+//input checked toggle (체크하면 반품 수량 나옴)
+	$('.chk').change(function(){ 
+	//$('input[type="checkbox"]').change(function(){ 
+		$(this).toggleClass("option-checked", this.checked);
+		$(this).closest('li.menu-item').find('.item-control').slideToggle();    
+	});
+}); 
+/* input type control
+$(document).ready(function() {
+	$('input[type="checkbox"]').change(function(){ 
+		$(this).toggleClass("option-checked", this.checked);
+		$(this).closest('li.menu-item').find('.item-control').slideToggle();    
+	});
+}); 
+*/
+
+//select 직접입력 선택 시, 텍스트 입력
+function userSelect(ele){
+	var $ele = $(ele);
+	var $userwrite = $('input[name=userwrite]');
+
+	if($ele.val() == "user"){
+		$userwrite.attr('readonly',false); $userwrite.val('');
+	} else{
+		$userwrite.attr('readonly',true); $userwrite.val($ele.val());
+	}
+}
+
+//radio 선택시 배송지 on/off
+$(function(){
+	$('.input-radio').eq(0).click(function(){$('.op-radio').slideDown();});
+	$('.input-radio').eq(1).click(function(){$('.op-radio').slideUp();});
+});
+	

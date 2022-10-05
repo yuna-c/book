@@ -1,0 +1,188 @@
+$(document).ready(function(){
+    // nav btn
+    $('.btn-nav').on('click', function(){
+        $(this).parents('#wrap').toggleClass('nav-on');
+    });
+
+    $('.black-bg').on('click', function(){
+        if( $('.nav').is(':visible') ){
+            $(this).parents('#wrap').removeClass('nav-on');
+        }
+	});
+
+	// btn-on
+    $('.toggle-area').on('click', '.btn-gray', function(){
+        $(this).toggleClass('btn-on');
+    });
+
+	//btn-on
+	//$(document).on('click', '.btn', function(){
+	//	$(this).toggleClass('btn-on').siblings().removeClass('btn-on')
+    //});
+	
+
+    // sort area
+    // $('.sort-area .btn').on('click', function(){
+    //     $(this).addClass('btn-on').siblings().removeClass('btn-on');
+    // });
+    // $('.sort-area a').on('click', function(){
+    //     $(this).addClass('on').siblings().removeClass('on');
+    // });
+
+    // pager
+    // $('.pager-num a').on('click', function(){
+    //     $(this).addClass('on').siblings().removeClass('on');
+    // });
+
+	// pager
+    $('.pager-type1 .pager-number a').on('click', function(){
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+
+    // tab click
+	$('.tab-type1 a').on('click', function(){
+		var $tab = $(this).parent();
+        var tabIndex = $tab.children('a').index($(this));
+        
+        $tab.children('a').removeClass('selected').eq(tabIndex).addClass('selected');
+        
+        if( $tab.children('a').length == $tab.parent().children('.tab-content').length ){
+            $tab.parent().children('.tab-content').hide().eq(tabIndex).show();
+        }
+    });
+
+    // btn-like
+    $(document).on('click', '.btn-like', function(){
+        $(this).toggleClass('on');
+    });
+
+    // btn-tooltip
+	$('.btn-tooltip').on('click', function(){
+        var $btn = $(this);
+        var $tooltipLayer = $(this).next('.tooltip-layer');
+
+        $btn.addClass('on');
+
+		if( $tooltipLayer.length > 0 ){
+			var posTop = $(this).height() + 10;
+
+			$(this).parent().addClass('relative');
+			$tooltipLayer.css('top', posTop).show();
+
+			$tooltipLayer.find('.btn-close').on('click', function(){
+                $btn.removeClass('on');
+				$tooltipLayer.hide();
+			});
+
+			$(document).mouseup(function(e){
+				if ( !$tooltipLayer.is(e.target) && $tooltipLayer.has(e.target).length === 0 ){
+                    $btn.removeClass('on');
+                    $tooltipLayer.hide();
+				}
+			});
+		}
+	});
+});
+
+
+// scrollAni(이동하고싶은class);
+function scrollAni(pos){
+    var posTop = $(pos).offset();
+    $('html, body').animate({scrollTop : posTop.top}, 500);
+}
+
+function scrollAniOption(pos, height, obj){
+    var tabIndex = $(obj).parent().children().index($(obj));
+    var posTop = $(pos).eq(tabIndex).offset();
+    var height = height;
+
+    $('html, body').animate({scrollTop : posTop.top - height}, 500);
+}
+
+// 탭 이동 / 탭 select
+
+// layerOpen(this,layer class,e);
+// function layerOpen(obj,layer,e){
+//     var $obj = $(obj);
+//     var $layer = $('.'+layer);
+    
+//     var posTop = ($obj.offset().top) + ($obj.outerHeight()) - 1;
+//     var posLeft = ($obj.offset().left);
+
+//     $layer.css({"top":posTop, "left":posLeft}).show();
+
+//     $(document).mouseup(function(e){
+//         if( !$layer.is(e.target) && $layer.has(e.target).length === 0 ){
+//             $layer.hide();
+//         }
+//     });
+
+// 	$(window).resize(function(){
+// 		    $layer.hide();
+// 	});
+// }
+
+// layer open
+/*
+function fnOpenLayer(layer){
+	var layerName = layer;
+	var layerClass = $('.' + layerName);
+	var layerSize = (layerClass.outerHeight()/2);
+
+	var innerHtml = '<a href="javascript:void(0);" class="btn-close"><span class="ico ico-close">팝업창 닫기</span></a>';
+
+	layerClass.append(innerHtml);
+	layerClass.css('marginTop','-'+layerSize+'px').show().parents('.dim-layer').fadeIn(300);
+
+	$('.btn-close, .btn-confirm, .pop-close').on('click', function(){
+		$('.btn-close').remove();
+		layerClass.hide().parents('.dim-layer').fadeOut(100);
+	});
+
+	return false;
+}*/
+
+// layer open
+function fnOpenLayer(layer){
+	var layerClass = $('.' + layer);
+    var innerHtml = '<a href="javascript:void(0);" class="btn-close"><span class="ico ico-close">팝업창 닫기</span></a>';
+
+	layerClass.append(innerHtml);
+
+    if( layerClass.siblings().not('.dim-bg').length > 0 ){
+        layerClass.siblings().not('.dim-bg').hide();
+    }
+
+    layerClass.show().parents('.dim-layer').fadeIn(300);
+
+	$('.btn-close, .btn-confirm, .pop-close').on('click', function(){
+		layerClass.find('.btn-close').remove();
+		layerClass.hide().parents('.dim-layer').fadeOut(100);
+    });
+
+
+	return false;
+}
+
+// layer close
+function fnCloseLayer(layer){
+    var layerClass = $('.' + layer);
+    
+	layerClass.hide().parents('.dim-layer').hide();
+
+	return false;
+}
+
+
+function readMore(obj){
+    var $this = $(obj);
+
+    if( $this.siblings('.more-txt').hasClass('on') === true ){
+        $this.siblings('.more-txt').removeClass('on');
+        $this.text('더보기');
+    }else{
+        $this.siblings('.more-txt').addClass('on');
+        $this.text('간략히 보기');
+    }
+
+}

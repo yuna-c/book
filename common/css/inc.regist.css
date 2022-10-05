@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+#footer{ display:none; }
+
+/* regist */
+.regist-content .info-area{ padding:25px 0 25px 0; }
+.regist-content .info-area .tit-dep6{ font-weight:700; }
+.regist-content .info-area .tit-dep6 small{ font-size:14px; font-weight:400; color:rgba(0, 0, 0, 0.4); }
+.regist-content .info-area p.info{ font-size:14px; font-weight:400; color:rgba(0, 0, 0, 0.4); }
+.regist-content .info-area .txt-underline{ font-size:14px; }
+.regist-content .info-area.txt-center > *{ margin-top:10px; font-size:16px; text-align:center; }
+.regist-content .form-area{ padding-top:25px; }
+.regist-content .list-dotted{ color:rgba(0, 0, 0, 0.4); }
+.regist-content .list-dotted > li:after, ..regist-content p.list-dotted:after{ background-color:rgba(0, 0, 0, 0.4); }
+.regist-content .btn-group{ margin-bottom:25px; }
+
+.regist-content .radio-area li .input-radio .ico-radio ~ span{ font-size:16px; }
+.regist-content .privacy-list li{ padding-bottom:8px; display:flex; color:rgba(0, 0, 0, 0.6); font-size:14px; font-weight:400; border:none; }
+.regist-content .privacy-list li span{ margin-left:auto; text-decoration:underline; }
+.regist-content .privacy-list li span a{ color:rgba(0, 0, 0, 0.4); }
+
+.regist-content .cart-header{ margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #eee; }
+.regist-content .cart-header .input-checkbox p{ font-size:16px; }
+.regist-content .cart-content ul li{ padding-bottom:20px; }
+.regist-content .cart-content ul li .input-checkbox p{ font-size:14px; }
+
+.regist-content .input-area .input-checkbox{ display:flex; }
+.regist-content .input-area .input-checkbox .ico-checkbox{ margin:3px 3px 0 0; vertical-align:top; }
+.regist-content .input-area .input-checkbox p{ margin-left:30px; display:inline-block; position:absolute; font-size:16px; }
+
+.school-content .content-header{ border-bottom:1px solid #ededed; }
+.school-content .board-tab .tab-content{ border-top:1px solid rgba(0, 0, 0, 0.93); }
+.school-content .search-form{ padding-top:0; margin-bottom:25px; border:none; }
+.school-content .search-form .btn{ height:40px; line-height:38px; top:0; right:5px; background-color:#F7F7F7; }
+.school-content .search-form .input-search input{ height:40px; line-height:38px; padding:0 20px; background-color:#F7F7F7; color:rgba(0, 0, 0, 0.93); font-size:14px; font-weight:400; letter-spacing:-1px; }
+
